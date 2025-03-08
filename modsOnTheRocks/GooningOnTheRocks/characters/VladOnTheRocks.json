@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				171,
+				-172
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				90,
+				-256
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				92,
+				-101
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				43,
+				-220
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				87,
+				-156
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/Gooning_on_the_rocks",
+	"position": [
+		50,
+		50
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		61,
+		61,
+		61
+	],
+	"camera_position": [
+		-40,
+		200
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}
