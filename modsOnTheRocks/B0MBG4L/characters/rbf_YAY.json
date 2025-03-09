@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceLeft",
+			"fps": 18,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 18,
+			"name": "Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/rbf_YAY",
+	"position": [
+		100,
+		450
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		120,
+		-50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
