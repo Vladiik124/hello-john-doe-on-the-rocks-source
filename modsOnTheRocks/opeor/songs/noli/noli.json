@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "rbf",
-		"player2": "opeor1",
+		"player2": "goojin",
 		"events": [
 			[
 				0,
@@ -84,7 +84,7 @@
 					[
 						"Change Character",
 						"dad",
-						"opeor2"
+						"goojin"
 					],
 					[
 						"hall",

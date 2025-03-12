@@ -18,7 +18,7 @@ function onBeatHit()
 	end
 	
 	if curBeat >= 392 then
-		xx2 = 650;
+		xx2 = 600;
 	end
 end
 function onUpdate() -- The Main Code
