@@ -23,6 +23,13 @@ function onCreate()
 	addLuaSprite('theGlowBG', false)
 	setLuaSpriteScrollFactor('theGlowBG', 1, 1);
 	setProperty('theGlowBG.alpha', 0);
+
+	makeLuaSprite('BlackScreen', 'john/IdkHowToFade', 0,0)
+	setProperty("BlackScreen.scale.x", 10)
+	setProperty("BlackScreen.scale.y", 10)
+	setProperty('BlackScreen.alpha', 0);
+	addLuaSprite('BlackScreen',true)
+
 	end
 	
 	function onSongStart()
@@ -82,5 +89,9 @@ function onCreate()
 	if curBeat == 394 then
 	doTweenAlpha('dadFadeEventTween', 'camHUD', 0, 5, 'linear');
 	end
+	if curBeat >= 460 then
+	doTweenAlpha("dadFadeEventTween", "BlackScreen",1,0.6,'linear')
+	end
+
 	
 	end
