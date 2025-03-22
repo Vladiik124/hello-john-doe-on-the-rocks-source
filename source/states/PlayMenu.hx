@@ -177,6 +177,7 @@ class PlayMenu extends MusicBeatSubstate
 
 
 
+
 	function buildBG() {
 		elevator = new FlxSprite().loadGraphic(Paths.image('menu/rolbox/song/elevator'));
 		elevator.screenCenter();
