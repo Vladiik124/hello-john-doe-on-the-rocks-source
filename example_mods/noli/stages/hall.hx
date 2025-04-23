@@ -7,12 +7,17 @@ var ourEmitter;
 
 function onCreate() {
     game.skipCountdown = true;
-    outside = new FlxSprite(-100, 165).loadGraphic(Paths.image('outside'));
+    outside = new FlxSprite(125, 280).loadGraphic(Paths.image('nice'));
+    outside.scale.x = 2;
+    outside.scale.y = 2;
     addBehindGF(outside);
 
-    hall = new FlxSprite(-228, 0).loadGraphic(Paths.image('hall'));
+    hall = new FlxSprite(220, 280).loadGraphic(Paths.image('evil'));
+    hall.scale.x = 2;
+    hall.scale.y = 2;
     addBehindGF(hall);
     hall.alpha = 0;
+
 
     snowworld = new FlxSprite(-28, 0).loadGraphic(Paths.image('snowworld'));
     addBehindGF(snowworld);
@@ -52,6 +57,16 @@ function onSongStart() {
     for (i in [game.camGame, game.camHUD]) {
         FlxTween.tween(i, {alpha: 1},1, {ease: FlxEase.quadIn});
     }
+
+
+    for (i in 0...game.opponentStrums.length){
+        var note = game.opponentStrums.members[i];
+        note.x = game.playerStrums.members[i].x;
+        note.y = game.playerStrums.members[i].y;
+        game.opponentStrums.members[i]
+        note.alpha = 0;
+        note.scrollFactor.set(1,1);
+   }
 }
 
 function onEvent(ev,val1,val2,time) {

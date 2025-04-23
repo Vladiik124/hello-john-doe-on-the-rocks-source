@@ -269,6 +269,7 @@ class PlayMenu extends MusicBeatSubstate
 		updatecButton();
 
 
+
 		fcStar = new FlxSprite(elevator.x + 613,elevator.y + 186).loadFrames('menu/rolbox/song/i_just_lost_my_dawggg');
 		fcStar.addAnimByPrefix('none','outline',24);
 		fcStar.addAnimByPrefix('complete','bronze',24);

@@ -937,6 +937,7 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown()
 	{
+
 		if(startedCountdown) {
 			callOnScripts('onStartCountdown');
 			return false;
@@ -957,7 +958,11 @@ class PlayState extends MusicBeatState
 			for (i in 0...opponentStrums.length) {
 				setOnScripts('defaultOpponentStrumX' + i, opponentStrums.members[i].x);
 				setOnScripts('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
-				opponentStrums.members[i].x = -1000;
+
+				if (SONG.song.toLowerCase() == "noli"){
+				setOnScripts('defaultOpponentStrumX' + i, playerStrums.members[i].x);
+				setOnScripts('defaultOpponentStrumY' + i, playerStrums.members[i].y);
+				}
 				//if(ClientPrefs.data.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
@@ -974,6 +979,9 @@ class PlayState extends MusicBeatState
 			}
 			else if (skipCountdown)
 			{
+				if (SONG.song.toLowerCase() == "noli" ){
+					OpeorNotes();
+				}
 				setSongTime(0);
 				return true;
 			}
@@ -1485,6 +1493,10 @@ class PlayState extends MusicBeatState
 			{
 				if(!ClientPrefs.data.opponentStrums) targetAlpha = 0;
 				else if(middleScroll) targetAlpha = 0.35;
+
+				if (SONG.song.toLowerCase() == "noli"){
+					targetAlpha = 0;
+				}
 			}
 
 			var babyArrow:StrumNote = new StrumNote(strumLineX, strumLineY, i, player);
@@ -1737,6 +1749,7 @@ class PlayState extends MusicBeatState
 						var fakeCrochet:Float = (60 / SONG.bpm) * 1000;
 						notes.forEachAlive(function(daNote:Note)
 						{
+
 							var strumGroup:FlxTypedGroup<StrumNote> = playerStrums;
 							if(!daNote.mustPress) strumGroup = opponentStrums;
 
@@ -3539,5 +3552,13 @@ class PlayState extends MusicBeatState
 		camFollow.x = x;
 		camFollow.y = y;
 		FlxG.camera.snapToTarget();
+	}
+
+	public  function OpeorNotes() {
+		for (i in 0...4) {
+			opponentStrums.members[i].alpha = 0;
+
+		}
+		
 	}
 }

@@ -24,7 +24,7 @@ var again:FlxText;
 var dieForever:FlxText;
 var canSelect:Bool = false;
 var options:Array<FlxText> = [];
-var deadTxts:Array<FlxText> = ['no renx this is not healthy for you renx', 'oughh my liver', 'Oh mah gah... Im so close...', 'All custards have been collected BEEP BOOP', 'People may say that the yang in the yinyang represents life. \nHowever I believe that Life IS the yinyang, \ncause it’s bullshit and wonderfulness are beautifully balanced…\n -Prosk', 'SKILL CHECK: PROSK LEVEL', 'https://youtu.be/pzgMqHW_JJE?si=1bo5UFef9gybfYzE
+var deadTxts:Array<FlxText> = ['no renx this is ot healthy for you renx', 'oughh my liver', 'Oh mah gah... Im so close...', 'All custards have been collected BEEP BOOP', 'People may say that the yang in the yinyang represents life. \nHowever I believe that Life IS the yinyang, \ncause it’s bullshit and wonderfulness are beautifully balanced…\n -Prosk', 'SKILL CHECK: PROSK LEVEL', 'https://youtu.be/pzgMqHW_JJE?si=1bo5UFef9gybfYzE
 ', 'The georgia grippers\n'];
 var curSelected:Int = 0;
 var time = 1.267;
@@ -44,20 +44,22 @@ function onCreatePost()
         {
 
             i.antialiasing = p.antialiasing = false;
-             i.rgbShader.enabled = i.noteSplashData.useRGBShader = p.useRGBShader = false;
+            i.rgbShader.enabled = i.noteSplashData.useRGBShader = p.useRGBShader = false;
             
         }
     }
 
-
+/*
     var notes = ['note_left','note_down','note_up','note_right'];
     for (i in 0...game.playerStrums.length) {
 
         game.playerStrums.members[i].x += 10;
         if (i > 0) {
             game.playerStrums.members[i].x += -4.7 * i;
+            game.opponentStrums.members[i].x += -4.7 * i;
         }
         game.playerStrums.members[i].alpha = 0.8;
+        game.opponentStrums.members[i].alpha = 0.8;
 
        var note = game.playerStrums.members[i];
 
@@ -71,7 +73,7 @@ function onCreatePost()
    
        insert(members.indexOf(note) + 1,t);
        t.cameras = [camHUD];
-    }
+    }*/
 
 
     // var t = new AttachedFlxText(0,0,0,InputFormatter.getKeyName(ClientPrefs.keyBinds.get('note_left')[0]),20);
@@ -85,7 +87,6 @@ function onCreatePost()
 
 
 }
-
 function onGameOver() {
     if (PlayState.SONG.song != 'iloveyou') {
         CustomSubstate.openCustomSubstate('g', true);

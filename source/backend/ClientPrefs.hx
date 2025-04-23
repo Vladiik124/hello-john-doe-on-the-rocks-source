@@ -11,7 +11,7 @@ import states.TitleState;
 	public var copyrightMusic:Bool = true;
 	#if target.threaded public var multiThreaded:Bool = true; #end
 	public var downScroll:Bool = false;
-	public var middleScroll:Bool = false;
+	public var middleScroll:Bool = true;
 	public var opponentStrums:Bool = true;
 	public var showFPS:Bool = true;
 	public var flashing:Bool = true;
@@ -38,7 +38,7 @@ import states.TitleState;
 		[0xFF71E300, 0xFFF6FFE6, 0xFF003100],
 		[0xFFFF884E, 0xFFFFFAF5, 0xFF6C0000]];
 
-	public var ghostTapping:Bool = true;
+	public var ghostTapping:Bool = false;
 	public var timeBarType:String = 'Time Left';
 	public var scoreZoom:Bool = true;
 	public var noReset:Bool = false;
